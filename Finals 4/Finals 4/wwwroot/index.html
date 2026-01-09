@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header-panel">
+            <h1>Appointments Scheduler</h1>
+            <div class="panel input-panel">
+                <h3>New / Edit Appointment</h3>
+                <div class="controls">
+                    <div class="control-group">
+                        <label for="clientSelect">Client</label>
+                        <select id="clientSelect">
+                            <option disabled selected>Select Client</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="serviceSelect">Service</label>
+                        <select id="serviceSelect">
+                            <option disabled selected>Select Service</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="appointmentDate">Date</label>
+                        <input type="date" id="appointmentDate">
+                    </div>
+                    <div class="control-group">
+                        <label for="appointmentTime">Time</label>
+                        <input type="time" id="appointmentTime">
+                    </div>
+                    <div class="control-group notes-group">
+                        <label for="notesInput">Notes</label>
+                        <input type="text" id="notesInput" placeholder="Optional">
+                    </div>
+                    <div class="actions">
+                        <button id="saveAppointment">Add Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel table-panel">
+            <h3>All Appointments</h3>
+            <div class="listview-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Client</th>
+                            <th>Service</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Notes</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="appointmentBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

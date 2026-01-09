@@ -1,0 +1,184 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    background: #000;
+    overflow-x: hidden;
+}
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: url("https://media.giphy.com/media/RGEcRueonvnBRqLPRu/giphy.gif");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        z-index: -1;
+    }
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.header-panel {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+    .header-panel h1 {
+        font-size: 4em;
+        font-weight: 900;
+        color: #ff4081;
+        margin-bottom: 30px;
+    }
+
+.panel.input-panel {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #ff4081;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 200px;
+}
+
+    .control-group label {
+        margin-bottom: 5px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .control-group select,
+    .control-group input {
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        outline: none;
+        transition: all 0.2s ease;
+        background-color: #fff;
+        color: #000;
+        height: 38px;
+        min-width: 150px;
+        -webkit-appearance: menulist-button;
+        -moz-appearance: menulist-button;
+        appearance: menulist-button;
+    }
+
+        .control-group select:focus,
+        .control-group input:focus {
+            border-color: #ff4081;
+            box-shadow: 0 0 6px rgba(255, 64, 129, 0.3);
+        }
+
+        .control-group select option {
+            background-color: #fff;
+            color: #000;
+        }
+
+.actions {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+    .actions button {
+        padding: 10px 25px;
+        border: none;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #ff4081, #ff79b0);
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+        .actions button:hover {
+            background: linear-gradient(135deg, #ff79b0, #ff4081);
+            transform: translateY(-2px);
+        }
+
+.panel.table-panel {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+.listview-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fafafa;
+}
+
+    table thead {
+        background: #ff4081;
+        color: #fff;
+    }
+
+        table thead th {
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+    table tbody td {
+        padding: 12px 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    table tbody tr:nth-child(even) {
+        background: #fdf0f7;
+    }
+
+    table tbody tr:hover {
+        background: #ffe0f2;
+    }
+
+button {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 6px;
+    background: #ff4081;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    margin-right: 5px;
+    transition: all 0.2s ease;
+}
+
+    button:hover {
+        background: #ff79b0;
+    }
